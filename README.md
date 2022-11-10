@@ -7,10 +7,10 @@ Should you have any issues or questions, feel free to drop us a line at help.efe
 
 This repository contains: 
  * coap_server - receives the data from Efento NB-IoT sensors and saves them in the PostgreSQL database. For more information visit getefento.com/library/efento-nb-iot-sensors-integration-with-a-python-coap-server/
-* create_response_payload - library of methods used to serialize the response sent to the sensor. Responses are used to change the device's configuration.
+* create_response_payload - library of functions used to serialize the response sent to the sensor. Responses are used to change the device's configuration.
 * proto files
 
-The server is constantly listening for data sent by Efento NB-IoT sensors. Once a new message arrives, the server parses the data, saves it in the PostgreSQL database and responds to the sensor with a configuration message created by 'create_response_payload' method.
+The server is constantly listening for data sent by Efento NB-IoT sensors. Once a new message arrives, the server parses the data, saves it in the PostgreSQL database and responds to the sensor with a configuration message created by 'create_response_payload'.
 
 ## How to use the application?
 1. Setup PostgreSQL database 
@@ -22,10 +22,10 @@ The server is constantly listening for data sent by Efento NB-IoT sensors. Once 
 5. Once a device sends a message with ACK, the server will respond with the new configuration
 
 ## Examples
-To get device info from the device use
+To get device info from the device use:
 
     response_payload = create_response_payload.get_device_info()
     
-To set rules on the device use
+To set rules on the device use:
 
     response_payload = create_response_payload.create_new_rules()
