@@ -1,7 +1,10 @@
 ## Efento-NB-IoT-sensors-remote-configuration-examples
 
-This quick demo will show you how to use a simple CoAP server to receive the data from Efento NB-IoT sensors and remotely change their configuration. Please note, that this is a demo implementation to explain how the response payload is generated and how to remotly reconfigure the sensors. <b>This should not be used as production code.</b>
-Should you have any issues or questions, feel free to drop us a line at help.efento.io
+This quick demo will show you how to use a simple CoAP server to receive the data from Efento NB-IoT sensors and remotely change their configuration. 
+> **Note**
+> This is a demo implementation to explain how the response payload is generated and how to remotly reconfigure the sensors. <b>This should not be used as production code.</b>
+
+Should you have any issues or questions, feel free to drop us a line at [help.efento.io](https://help.efento.io)
 
 ## How does it work?
 
