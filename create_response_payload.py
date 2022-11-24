@@ -13,7 +13,7 @@ def set_configuration_parameters():
     To set calibration parameters, send to a sensor message with the values:
 
     calibration_request - requested channel number. bitmask bits[0:2].
-    parameters - table of calibration parameters.
+    parameters - array of calibration parameters.
     channel_assignment - assignment of a channel. Code specific for each sensor driver used for validating the request [hex].
 
     General information about the rules configuration you find in https://jira.efento.io/browse/ES6-1016
@@ -49,13 +49,13 @@ def create_new_rules():
     # Set rules parameters  with protobuf fields from ProtoRule object .
     rules.channel_mask = 0b000001
     rules.condition = 2
-    # Add the table of parameters values to the protobuf field "parameters".
+    # Add the array of parameters values to the protobuf field "parameters".
     rules.parameters.extend([500, 0, 2, 3, 1])
     rules.action = 2
-    # Add all parameters to the table of rules configuration with Protoconfig object.
+    # Add all parameters to the array of rules configuration with Protoconfig object.
     device_config.rules.extend([rules])
 
-    #To set next rules add rules parameters to next position in the table of rules configuration.
+    #To set next rules add rules parameters to next position in the array of rules configuration.
     rules.channel_mask = 0b000010
     rules.condition = 2
     rules.ClearField("parameters")
